@@ -14,8 +14,8 @@ server.use(cookieSession({
 
 //Twitter Strategy
 passport.use(new TwitterStrategy({
-    consumerKey:"2FakTHhdLNaJS23cPcQrtkLwG",
-    consumerSecret: "gUc76nNfOfcaUj7HwlP6oZy442EB3t4oa3nlWYUPufsmP8fnXl",
+    consumerKey:process.env.API_KEY,
+    consumerSecret: process.env.API_SECRET,
     callbackURL: "http://localhost:4001/auth/twitter/callback"
   },
   function(token, tokenSecret, profile, cb) {
